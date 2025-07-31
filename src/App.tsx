@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Container } from './components/Container';
+import { Logo } from './components/Logo';
+import { Menu } from './components/Menu';
 
-function App() {
-  const [count, setCount] = useState(0)
+import './styles/global.css';
+import './styles/theme.css';
 
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Container>
+        <Logo />
+      </Container>
+      <Container>
+        <Menu />
+      </Container>
+      <Container>
+        <form className='form'>
+          <div className='formRow'>
+            <label htmlFor='meuInput'>Nome</label>
+            <input id='meuInput' type='text' placeholder='Digite seu nome...' />
+          </div>
+          <div className='formRow'>
+            <label htmlFor='meuInput2'>Telefone</label>
+            <input
+              id='meuInput2'
+              type='text'
+              placeholder='Digite seu telefone...'
+            />
+          </div>
+          <div className='formRow'>
+            <label htmlFor='meuInput3'>Email</label>
+            <input
+              id='meuInput3'
+              type='text'
+              placeholder='Digite seu email...'
+            />
+          </div>
+          <div>
+            <button type='submit'>Proximo</button>
+            <button type='submit'>Limpar</button>
+          </div>
+        </form>
+      </Container>
     </>
-  )
+  );
 }
-
-export default App
