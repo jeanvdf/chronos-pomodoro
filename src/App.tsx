@@ -1,4 +1,5 @@
 import { Container } from './components/Container';
+import { DefaultInput } from './components/DefaultInput';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 
@@ -17,8 +18,7 @@ export default function App() {
       <Container>
         <form className='form'>
           <div className='formRow'>
-            <label htmlFor='meuInput'>Nome</label>
-            <input id='meuInput' type='text' placeholder='Digite seu nome...' />
+            <DefaultInput id='meuInput' type='text' labelText='Nome' />
           </div>
           <div className='formRow'>
             <label htmlFor='meuInput2'>Telefone</label>
