@@ -1,7 +1,10 @@
+import { ChevronRight } from 'lucide-react';
 import { Container } from './components/Container';
+import { DefaultButton } from './components/DefaultButton';
 import { DefaultInput } from './components/DefaultInput';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
+import { Progress } from './components/Progress';
 
 import './styles/global.css';
 import './styles/theme.css';
@@ -18,27 +21,36 @@ export default function App() {
       <Container>
         <form className='form'>
           <div className='formRow'>
-            <DefaultInput id='meuInput' type='text' labelText='Nome' />
-          </div>
-          <div className='formRow'>
-            <label htmlFor='meuInput2'>Telefone</label>
-            <input
-              id='meuInput2'
+            <DefaultInput
+              id='nomeInput'
               type='text'
-              placeholder='Digite seu telefone...'
+              labelText='Nome'
+              placeholder='Nome e sobrenome'
             />
           </div>
           <div className='formRow'>
-            <label htmlFor='meuInput3'>Email</label>
-            <input
-              id='meuInput3'
-              type='text'
+            <DefaultInput
+              id='telefoneInput'
+              type='tel'
+              labelText='Telefone'
+              placeholder='( __ ) _____-____'
+              maxLength={15}
+            />
+          </div>
+          <div className='formRow'>
+            <DefaultInput
+              id='emailInput'
+              type='email'
+              labelText='Email'
               placeholder='Digite seu email...'
             />
           </div>
           <div>
-            <button type='submit'>Proximo</button>
+            <DefaultButton icon={<ChevronRight />} />
             <button type='submit'>Limpar</button>
+          </div>
+          <div className='formRow'>
+            <Progress percentage={100} />
           </div>
         </form>
       </Container>

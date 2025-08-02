@@ -1,0 +1,78 @@
+.progressbar {
+  width: 50%;
+  height: 20px;
+  background-color: #e8ac20;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5%;
+  display: flex;
+}
+
+.pedidoaceito {
+  background-color: #4caf50;
+  border-radius: 5%;
+}
+
+.progressText10 {
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  background-color: rgb(251, 156, 156);
+  color: var(--text);
+}
+
+.progressText40 {
+  background-color: rgb(248, 119, 119);
+  color: var(--text);
+}
+
+.progressText60 {
+  background-color: rgb(249, 85, 85);
+  color: var(--text);
+}
+
+.progressText70 {
+  background-color: rgb(252, 29, 29);
+  color: var(--text);
+}
+
+.progressText80 {
+  background-color: rgb(184, 22, 22);
+  color: var(--text);
+}
+
+.progressText90 {
+  background-color: rgb(151, 10, 10);
+  color: var(--text);
+}
+
+.progressText100 {
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+  transition: 1s;
+  background-color: rgb(105, 4, 4);
+  color: var(--text);
+}
+
+.progressContainer {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 24px;
+  width: 277px;
+}
+
+.progressBar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.5s ease;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.label {
+  padding: 0 8px;
+  font-size: 14px;
+}
