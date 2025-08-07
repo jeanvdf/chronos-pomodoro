@@ -1,18 +1,14 @@
 .button {
-  display: flex;
   border: none;
-  background: var(--primary-fire);
-  padding: 4px;
-  color: var(--text-default);
+  display: flex;
   align-items: center;
   justify-content: center;
   min-width: 120px;
-  border-radius: 3px;
-  width: 40px;
-  height: 30px;
-  gap: 4px;
-  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  margin: 15px 0;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .button svg {
@@ -21,8 +17,15 @@
 }
 
 .button:hover {
-  filter: brigthness(80%);
+  filter: brightness(80%);
 }
 
-.buttonAction {
+.yellow {
+  background: #b78a05d3; /* Indica alerta (amarelo) */
+  color: var(--text-over-primary);
+}
+
+.red {
+  background: var(--error);
+  color: var(--text-over-error);
 }

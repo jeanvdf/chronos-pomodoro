@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.buttonContainer {
+  min-width: 120px;
+  margin: 15px 0;
+  background: var(--primary-fire);
+  padding: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  size: 20px;
+}
+
+.buttonContainer svg {
+  width: 20px;
+  height: 20px;
+}
+
+.buttonContainer:hover {
+  filter: brightness(80%);
+}

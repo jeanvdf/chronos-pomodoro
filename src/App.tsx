@@ -1,6 +1,5 @@
-import { ChevronRight } from 'lucide-react';
+import { HandMetal } from 'lucide-react';
 import { Container } from './components/Container';
-import { DefaultButton } from './components/DefaultButton';
 import { DefaultInput } from './components/DefaultInput';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
@@ -8,10 +7,23 @@ import { Progress } from './components/Progress';
 
 import './styles/global.css';
 import './styles/theme.css';
+import { DefaultButton } from './components/DefaultButton';
+import { Footer } from './components/Footer';
+import { Heading } from './components/Heading';
+import { useState } from 'react';
 
 export default function App() {
+  const [number, setNumber] = useState(0);
+
+  function handleClick() {
+    setNumber(prevState => prevState + 1);
+    console.log(number);
+  }
+
   return (
     <>
+      <Heading> Number: {number}</Heading>
+      <button onClick={handleClick}>Atualizar Nº</button>
       <Container>
         <Logo />
       </Container>
@@ -46,13 +58,15 @@ export default function App() {
             />
           </div>
           <div>
-            <DefaultButton icon={<ChevronRight />} />
-            <button type='submit'>Limpar</button>
-          </div>
-          <div className='formRow'>
-            <Progress percentage={100} />
+            <DefaultButton icon={<HandMetal />} color='yellow' />
           </div>
         </form>
+      </Container>
+      <Container>
+        <Progress percentage={100} />
+      </Container>
+      <Container>
+        <Footer />
       </Container>
     </>
   );
